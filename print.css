@@ -1,0 +1,59 @@
+#header-top, #project-menu, #footer, #kat-tags, .rightMenu, .katalog-strankovani,
+.buttonGreen, .logo_link, #header-content, #searchdatabase, hr {
+    display: none;    
+}
+
+.logo-link {
+    width: 0;
+    height: 0;
+}
+
+#obsah-container {
+    column-count: 1;
+    -moz-column-count: 1;
+}
+
+#page.index.podnet .topMenu h1 {
+    font-size: 14px;   
+    margin-bottom: 2px;
+    padding-bottom: 2px;
+}
+
+.clear {
+    clear: both;
+}
+
+.header_project {
+    background-color: #85A92B;
+}
+
+#page.index.podnet .topMenu h2 {
+    font-size: 14px;
+}
+
+#page.index.podnet .topMenu > div:nth-child(1) {
+    border-right: 0px;
+}
+
+#page.index.podnet .topMenu > div:nth-child(2) {
+    border-right: 0px;
+}
+
+#page.index.podnet .topMenu > div:nth-child(3) {
+    border-right: 0px;
+}
+
+#page.index.podnet .topMenu > div:nth-child(4) {
+    border-right: 0px;
+}
+
+#picture-map {
+    width: 100%;
+     vertical-align: bottom;
+}
+
+#obsah-container {
+    vertical-align: bottom;
+    float: left;
+    width: 100%;
+}

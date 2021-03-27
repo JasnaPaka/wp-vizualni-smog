@@ -1,0 +1,91 @@
+/*
+Theme Name: Projekt Vizualnismog.plzne.cz
+Author: Pavel Cvrček
+Description: Šablona projektu Vizuální smog Plzeň
+Template: vpp
+Version: 1.0
+*/
+
+@import url("/wp-content/themes/vpp-child-vizualnismog/style-shared.css");
+
+#obsah-container {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+}
+
+#page.katalog .post .padding {
+    height: 50px;
+}
+
+#page.titulni .contentheight {
+    min-height: 1100px;
+}
+
+#page.index #actualprojects {
+    height: 1100px;
+}
+
+.strankovani-polozka-akt, .buttonGreen,
+.pridat-dilo .button.orange,
+.pridat-dilo .updated {
+    background-color: #008DD2;
+}
+
+#page.index.podnet .topMenu h1,
+#obsah-perex,
+.content a,
+#actualprojects a h3,
+.pridat-dilo p a,
+#page form.rows h3,
+.contentheight p a,
+#mappage a
+{
+    color: #008DD2;
+}
+
+#promo-video {
+
+}
+
+#header-content #header_project {
+    background-color: white;
+    color: black;
+}
+
+#header {
+    background-color: white;
+    color: black;
+}
+
+#header-content #header_project #header_project_left a {
+    color: black;
+}
+
+#project-menu {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#project-menu > li a {
+    color: black;
+}
+
+#project-menu > li a:hover {
+    color: white;
+    background-color: #333333;
+}
+
+#project-menu > li {
+    padding: 5px 0 5px 0;
+}
+
+#header-content #header_project #header_project_left p,
+#header-content #header_project #header_project_right p{
+    color: black;
+    font-size: 16px;
+}
+
+#header-content #header_project #header_project_right {
+    background: url('images/header_separator_project2.png') no-repeat 0 center;
+}

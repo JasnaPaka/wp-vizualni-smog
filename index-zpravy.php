@@ -26,25 +26,8 @@
                 <a href="<?php the_permalink() ?>" style="<?php printf('color: %s', $color) ?>"><h3><?php the_title(); ?></h3></a>
                 <p><span>#</span><?php echo ($tags) ? trim($tags, ', ') : 'Příspěvek bez tagů'; ?></p>
                 <p><span>Vloženo</span><?php the_date('d. m. Y'); ?></p>
-                <p><span>Text</span>
-                  <?php
-                    $authors = get_post_meta(get_the_ID(), 'authors', true);
-                    if ($authors)
-                    {
-                      $users = '';
-                      foreach ($authors as $author_id)
-                      {       
-                        $user = get_userdata($author_id);
-                        $users .= sprintf('<a href="%s%s/zpravy/?filtr=autor_%s">%s %s</a>, ', get_bloginfo('url'), ($project_menu) ? sprintf('/projekt/%s', $project_menu->slug): '', $author_id, $user->first_name, $user->last_name);
-                      }
-                      echo trim($users, ', ');
-                    }
-                    else
-                    {
-                      $user = get_userdata($post->post_author);
-                      printf('<a href="%s%s/zpravy/?filtr=autor_%s">%s %s</a>', get_bloginfo('url'), ($project_menu) ? sprintf('/projekt/%s', $project_menu->slug): '', $post->post_author, $user->first_name, $user->last_name);
-                    }
-                  ?>
+                <p><span>Autor</span>
+                    Vizuální smog v Plzni
                 </p>
               </div>
             </div><?php

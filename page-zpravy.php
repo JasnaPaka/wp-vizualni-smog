@@ -20,10 +20,7 @@
 <div class="padding title">
 
     <div class="rightMenu">
-		
-		<span class="title">Filtrovat podle</span>
-	
-        <?php foreach ($filters as $key => $value) printf('<span class="arrow%s" name="%s">%s</span>', (strpos($filter, $key) !== false && $hidetags == false) ? ' up' : '', $key, $value); ?>
+
 
 		   <div id="searchdatabase" class="searchnews">
               <form method="get" action="<?php bloginfo('siteurl') ?>">
@@ -35,14 +32,11 @@
 
     </div>
 
-	<div class="clear"></div>	
+	<div class="clear"></div>
 
 
 </div>
 
-
-
-    <hr>
 
     <div class="inner">
 
@@ -162,27 +156,12 @@
             <a href="<?php the_permalink() ?>"><?php the_post_thumbnail('post-index-recent'); ?></a>
 
             <div class="padding">
-              <a href="<?php the_permalink() ?>"><h3 style="<?php printf('color: %s', $color) ?>"><?php the_title(); ?></h3></a>
+              <a href="<?php the_permalink() ?>"><h3 style="color:black"><?php the_title(); ?></h3></a>
               
               <p><span>#</span><?php echo ($tags) ? trim($tags, ', ') : 'Příspěvek bez tagů'; ?></p>
               <p><span>Vloženo</span><?php the_date('d. m. Y'); ?></p>
-              <p><span>Text</span>
-                <?php
-                  $authors = get_post_meta(get_the_ID(), 'authors', true);
-                  if ($authors)
-                  {
-                    $users = '';
-                    foreach ($authors as $author_id)
-                    {       
-                      $users .= sprintf('<a href="%s%s/zpravy/?filtr=autor_%s">%s</a>, ', get_bloginfo('url'), ($project_menu) ? sprintf('/projekt/%s', $project_menu->slug): '', $author_id, getAuthorNickname($author_id));
-                    }
-                    echo trim($users, ', ');
-                  }
-                  else
-                  {                                                                                                                       
-                    printf('<a href="%s%s/zpravy/?filtr=autor_%s">%s</a>', get_bloginfo('url'), ($project_menu) ? sprintf('/projekt/%s', $project_menu->slug): '', $post->post_author, getAuthorNickname($post->post_author));
-                  }
-                ?>
+              <p><span>Autor</span>
+                  Vizuální smog v Plzni
               </p>
             </div>
 

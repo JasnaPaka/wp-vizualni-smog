@@ -89,3 +89,11 @@ Version: 1.0
 #header-content #header_project #header_project_right {
     background: url('images/header_separator_project2.png') no-repeat 0 center;
 }
+
+.titleBigGreen {
+    color: black;
+}
+
+a, #page form.rows h3, .pridat-dilo p a {
+    color: black;
+}

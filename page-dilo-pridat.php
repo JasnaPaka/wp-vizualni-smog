@@ -41,7 +41,10 @@
 <div class="row">
     <label>Fotografie:</label>
     <input type="file" id="photo" name="photo[]" multiple="multiple" /><br />
-    <p class="gray"><?php print ($KV["pridat_dilo_informace_fot"]) ?></p>
+    <p class="gray">
+        <?php print ($KV["pridat_dilo_informace_fot"]) ?>
+        Jejich celková maximální velikost může být <?php print getMaxUploadLimit() ?> MB.
+    </p>
 </div>
 
 <h3>Umístění</h3>

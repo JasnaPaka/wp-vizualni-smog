@@ -72,19 +72,6 @@
 
           </div>
 
-          <?php if (!$project_menu) { ?>
-
-          <div class="tagsblock projekt">
-
-            <?php
-              $projects = wp_get_sites(array('public' => true));
-              foreach ($projects as $project)      
-                printf('<span name="projekt_%s" class="%s">%s</span> ', $project['blog_id'], ($filter == sprintf('projekt_%s', $id)) ? 'active' : '', get_blog_option($project['blog_id'], 'blogname'));
-            ?>  
-
-          </div>
-
-          <?php } ?> 
 
           <div class="tagsblock tema"<?php echo ((strpos($filter, 'tema') !== false) && $hidetags == false) ? ' style="display: block"' : '' ?>>
 

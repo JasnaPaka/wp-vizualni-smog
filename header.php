@@ -1,7 +1,7 @@
 <?php
   if (is_front_page() && is_home()) {
-	$objectId = $_GET["objekt"];
-	if (strlen($objectId) > 0) {
+	$objectId = isset($_GET["objekt"]) ? $_GET["objekt"] : null;
+	if ($objectId != null || strlen($objectId) > 0) {
 		wp_redirect("/katalog/dilo/".$objectId."/");	
 	}
   }
@@ -42,13 +42,13 @@
   <?php
     if (isProjectPage())
     {
-      $project_color = get_blog_option($project->blog_id, 'project_color', '#000');
-      $project_background = wp_get_attachment_url(get_blog_option($project->blog_id, 'project_background'));
+      $project_color = '#333333';
+      $project_background = wp_get_attachment_url(get_blog_option(get_current_blog_id(), 'project_background'));
       ?>
       <style>
         #page.index .post h3 {color: <?php echo $project_color ?>}
-        h3.titleBigGreen {color: <?php echo $project_color ?>}   
-        #mappage h2 {color: <?php echo $project_color ?>} 
+        h3.titleBigGreen {color: <?php echo $project_color ?>}
+        #mappage h2 {color: <?php echo $project_color ?>}
       </style>
       <?php
     }
